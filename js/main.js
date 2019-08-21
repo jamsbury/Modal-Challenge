@@ -21,7 +21,7 @@
     }
 }());
 
-// Modal Functionality (Vanilla JS)
+// Modal Functionality (JQuery)
 $( document ).ready(function() {
 
     // multi-purpose click event trigger as indicated via CSS class 'trigger'
