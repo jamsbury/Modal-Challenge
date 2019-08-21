@@ -641,16 +641,19 @@ h3 {
   font-size: 18pt;
 }
 
+/* Main wrapper */
 .page-wrap {
   width: 100%;
   height: 100%;
   margin: 0;
 }
 
+/* Modal background appearance */
 .underlay{
   color: rgba(0, 0, 0, 0.5)
 }
 
+/* 'Delete Item' button appearance */
 a.button {
   width: 300px;
   display: block;
@@ -664,10 +667,12 @@ a.button {
   background-color: #00d9e5;
 }
 
+/* Keeps top button closer to the top of the viewport */
 a.button:nth-child(1) {
   margin-top: 1em;
 }
 
+/* Wraps modal, starts hidden */
 .modal-wrapper{
   width: 100%;
   height: 100%;
@@ -683,7 +688,10 @@ a.button:nth-child(1) {
   visibility: visible;
 }
 
+/* Visuals and placement of the modal window; is a container for content */
+/* This is sized for mobile first */
 section.modalobject{
+  z-index: 3;
   width: 100%;
   height: 100%;
   display: flex;
@@ -700,6 +708,7 @@ section.modalobject{
   opacity: 1;
 }
 
+/* Close button appearance */
 .button-close {
   border: none;
   background-color: #444;
@@ -714,6 +723,7 @@ section.modalobject{
   background-color: #111;
 }
 
+/* Close button appearance */
 .delete-button {
   border: none;
   background-color: #ff0000;
@@ -727,6 +737,7 @@ section.modalobject{
   background-color: #aa0000;
 }
 
+/* Using article for lack of a better element title, this is primarily intended for the top blue bar of the modal window */
 section.modalobject article {
   top: 0;
   padding: 3em 0.5em 3em 0em;
@@ -735,6 +746,7 @@ section.modalobject article {
   color: #fffeee;
 }
 
+/* This is meant for adjusting the bottom blue bar of the modal window without creating a unique class for it */
 section.modalobject article:last-child {
   padding: 3em 0.5em 3em 0em;
   bottom: 0;
@@ -742,11 +754,15 @@ section.modalobject article:last-child {
   text-align: center;
 }
 
+
 .button-close, .delete-button {
   display: inline;
 }
 
+/* Media query to create a window above 900px width */
 @media (min-width: 900px) {
+
+  /* Modal sizing and placement adjustments, creates window */
   section.modalobject{
     width: 50%;
     height: 60vh;
@@ -763,6 +779,7 @@ section.modalobject article:last-child {
     opacity: 1;
   }
   
+  /* Resizing delete buttons */
   .button-close {
     padding: 1em;
     margin-right: 0.5em;
@@ -774,6 +791,7 @@ section.modalobject article:last-child {
     width: auto;
   }
 
+  /* Resizing top and bottom blue bars of modal window */
   section.modalobject article {
     padding: 1em;
     padding-left: 0;

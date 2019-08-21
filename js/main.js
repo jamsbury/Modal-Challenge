@@ -24,12 +24,20 @@
 // Modal Functionality (Vanilla JS)
 $( document ).ready(function() {
 
-    // multi-purpose click event trigger
+    // multi-purpose click event trigger as indicated via CSS class 'trigger'
     $('.trigger').click(function() {
-
+    
         // toggle classes
         $('.modal-wrapper').toggleClass('open');
         $('.page-wrap').toggleClass('underlay');
+        return false;
+    });
+
+    // prevent modal from closing when it is clicked
+    $('.modalobject').click(function() {
+        // toggle classes
+        $('.modal-wrapper').addClass('open');
+        $('.page-wrap').addClass('underlay');
         return false;
     });
   });
